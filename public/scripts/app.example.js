@@ -25,10 +25,21 @@ class App {
     return false;
   }
 
+  // check if the car capacity fit with the request
+  filterPassenger = (i) => {
+    let car = Car.list;
+    let passenger = this.numberPassanger.value;
+    if (car[i].capacity == passenger){
+      return true;
+    }
+    return false;
+  };
+
   // function to render cards
-  renderCardCars = (i) =>{
+  renderCardCars = (car) =>{
+    console.log(car)
     let node = document.createElement("div");
-    node.innerHTML = Car.list[i].render()
+    node.innerHTML = car.render();
     this.carContainerElement.appendChild(node);
   }
 
@@ -41,36 +52,19 @@ class App {
     // do looping to check if the car match the filter request
     for(let i = 0; i < carsData.length; i++){
       // if car ready and the driver type also match the client request then it will be render
-        if(this.carsAvailabilityTime(carsData[i]) == true && carsData[i].available == true && this.driverType.value == "true" ){
-         this.renderCardCars(i)
-        }else if(this.carsAvailabilityTime(carsData[i]) == true && carsData[i].available == true && this.driverType.value == "true" ){
-          this.renderCardCars(i)
+        if(this.carsAvailabilityTime(carsData[i]) == true && carsData[i].available == true && this.driverType.value == "true" || this.carsAvailabilityTime(carsData[i]) == false && carsData[i].available == false && this.driverType.value == "false"){
+          // optional filter value (passanger capacity)
+          if(this.numberPassanger.value == ""){
+            this.renderCardCars(carsData[i]);
+          }else if(this.filterPassenger(i)){
+            this.renderCardCars(carsData[i]);
+          } 
         }
         else{
         console.log(carsData[i].model)
       }
     }
   }
-  
-  // -----------------------------
-  filterPassenger = () => {
-    // clear cards and replace it
-    this.clear();
-    // Filter cars base on the number of passenger
-    let passenger = this.numberPassanger.value;
-    // get the car list form Car class
-    let car = Car.list
-    for (let i = 0; i < car.length; i++ ){
-      if(car[i]["capacity"] == passenger){
-        let node = document.createElement("div");
-        node.innerHTML = Car.list[i].render()
-        this.carContainerElement.appendChild(node);
-      }
-    }
-    let tgl = new Date(Car.list[0].availableAt).getTime();
-    console.log(tgl)  
-  };
-
 
   run = () => {
     Car.list.forEach((car) => {
