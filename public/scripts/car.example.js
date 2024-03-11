@@ -41,12 +41,18 @@ class Car {
 
   render() {
     return `
-      <p>id: <b>${this.id}</b></p>
-      <p>plate: <b>${this.plate}</b></p>
-      <p>manufacture: <b>${this.manufacture}</b></p>
-      <p>model: <b>${this.model}</b></p>
-      <p>available at: <b>${this.availableAt}</b></p>
-      <img src="${this.image}" alt="${this.manufacture}" width="64px">
-    `;
+    <div class="col">
+    <div class="card h-100">
+      <img src="${this.image}" style="-o-object-fit: cover;object-fit: cover;" width=270px height=160px   class="card-img-top mt-4">
+      <div class="card-body">
+        <h5 class="card-title">${this.manufacture} ${this.model}</h5>
+        <h4>Rp 430.000 / hari</h4>
+        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, commodi ut dignissimos excepturi maiores porro ea iure quibusdam iste autem? Rem ab dicta obcaecati eos, reiciendis delectus explicabo corporis eveniet?</p>
+        <p><img class="me-2" src="./icon/fi_users.png" alt=""> ${this.capacity}</p>
+        <p><img class="me-2" src="./icon/fi_settings.png" alt="">${this.transmission}</p>
+        <p><img class="me-2" src="./icon/fi_calendar.png" alt="">${this.year}</p>
+      </div>
+    </div>
+  </div>`
   }
 }

@@ -96,29 +96,30 @@
     <div class="container d-flex justify-content-center my-5">
         <div class="row">
             <div class="col"> 
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Open this select menu</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                <select class="form-select" aria-label="Default select example" id="driver-type">
+                    <option value="Default" selected>Pilih Tipe Driver</option>
+                    <option value="true">Dengan supir</option>
+                    <option value="false">Tanpa supir</option>
+                </select>
+            </div>
+            <div class="col"> 
+                <input id="start-date" class="form-control" type="date"/>
+            </div>
+            <div class="col"> 
+                <select class="form-select" aria-label="Default select example" id="pick-up-time">
+                    <option selected value="false">Pilih waktu</option>
+                    <option value="08:00">08.00 WIB</option>
+                    <option value="09:00">09.00 WIB</option>
+                    <option value="10:00">10.00 WIB</option>
+                    <option value="11:00">11.00 WIB</option>
+                    <option value="12:00">12.00 WIB</option>
                   </select>
             </div>
             <div class="col"> 
-                <input id="startDate" class="form-control" type="date" />
-            </div>
-            <div class="col"> 
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Open this select menu</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
-            </div>
-            <div class="col"> 
-                <input type="number" id="clear-btn" class="form-control" aria-describedby="passwordHelpBlock">
+                <input type="number" id="passenger-num" class="form-control" aria-describedby="passwordHelpBlock">
             </div>
             <div class="col-2"> 
-                <button type="button" id="load-btn" class="btn btn-success">Success</button>
+                <button type="submit" id="load-btn" class="btn btn-success">Submit</button>
             </div>
         </div>
     </div>
@@ -127,9 +128,11 @@
   <!-- End Search section -->
   <section>
     <div class="container">
+      <!-- cards group section -->
         <div class="row row-cols-1 row-cols-md-3 g-4" id="card-search">
-          
+         <!-- card will be render here-->
         </div>
+      <!-- End Cards group Section -->
     </div>
   </section>
   <!-- Footer -->
