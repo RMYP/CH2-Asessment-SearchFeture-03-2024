@@ -52,7 +52,7 @@ class App {
     // do looping to check if the car match the filter request
     for(let i = 0; i < carsData.length; i++){
       // if car ready and the driver type also match the client request then it will be render
-        if(this.carsAvailabilityTime(carsData[i]) == true && carsData[i].available == true && this.driverType.value == "true" || this.carsAvailabilityTime(carsData[i]) == false && carsData[i].available == false && this.driverType.value == "false"){
+        if(this.driverType.value == "default" && this.carsAvailabilityTime(carsData[i]) == true ||this.carsAvailabilityTime(carsData[i]) == true && carsData[i].available == true && this.driverType.value == "true" || this.carsAvailabilityTime(carsData[i]) == false && carsData[i].available == false && this.driverType.value == "false"){
           // optional filter value (passanger capacity)
           if(this.numberPassanger.value == ""){
             this.renderCardCars(carsData[i]);
@@ -60,9 +60,6 @@ class App {
             this.renderCardCars(carsData[i]);
           } 
         }
-        else{
-        console.log(carsData[i].model)
-      }
     }
   }
 
