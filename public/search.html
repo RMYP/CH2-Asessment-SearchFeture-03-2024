@@ -85,7 +85,7 @@
           </div>
         </div>
         <div class="col-10 col-sm-8 col-lg-6" id="car-img-wrapper">
-          <img id="img_car" src="images/img_car.svg"  alt="Bootstrap Themes" loading="lazy">
+          <img id="img_car" src="images/Mercedes Car EQC 300kW Edition - 900x598 1.png"  alt="Bootstrap Themes" loading="lazy">
         </div>   
       </div>
     </div>
@@ -93,19 +93,22 @@
   <!-- end main section -->
   <!-- search section -->
   <section>
-    <div class="container d-flex justify-content-center my-5">
-        <div class="row">
-            <div class="col"> 
+    <div class="container" id="input-form-filter-car">
+        <div class="row mx-auto">
+            <div class="col-3 my-3"> 
+                <label for="driver-type"><small>Tipe Driver</small></label>
                 <select class="form-select" aria-label="Default select example" id="driver-type">
                     <option value="default" selected>Pilih Tipe Driver</option>
                     <option value="true">Dengan supir</option>
                     <option value="false">Tanpa supir</option>
                 </select>
             </div>
-            <div class="col"> 
+            <div class="col-2 my-3"> 
+                <label for="start-date"><small>Tanggal</small></label>
                 <input id="start-date" class="form-control" type="date"/>
             </div>
-            <div class="col"> 
+            <div class="col-2 my-3"> 
+                <label for="pick-up-time"><small>Waktu Jemput/ambil</small></label>
                 <select class="form-select" aria-label="Default select example" id="pick-up-time">
                     <option selected value="false">Pilih waktu</option>
                     <option value="08:00">08.00 WIB</option>
@@ -115,11 +118,12 @@
                     <option value="12:00">12.00 WIB</option>
                   </select>
             </div>
-            <div class="col"> 
+            <div class="col-3 my-3"> 
+                <label for="passenger-num"><small>Jumlah Penumpang (optional)</small></label>
                 <input type="number" id="passenger-num" class="form-control">
             </div>
-            <div class="col-2"> 
-                <button type="submit" id="load-btn" class="btn btn-success">Submit</button>
+            <div class="col-2 my-4"> 
+                <button type="submit" id="load-btn" class="btn btn-success my-3">Cari Mobil</button>
             </div>
         </div>
     </div>
