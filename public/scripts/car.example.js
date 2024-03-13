@@ -45,9 +45,9 @@ class Car {
     <div class="card h-100">
       <img src="${this.image}" style="-o-object-fit: cover;object-fit: cover;" width=270px height=160px   class="card-img-top mt-4">
       <div class="card-body">
-        <h5 class="card-title">${this.manufacture} ${this.model}</h5>
-        <h4>Rp 430.000 / hari</h4>
-        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, commodi ut dignissimos excepturi maiores porro ea iure quibusdam iste autem? Rem ab dicta obcaecati eos, reiciendis delectus explicabo corporis eveniet?</p>
+        <h5 class="card-title" id="body-16-bold">${this.manufacture} ${this.model}</h5>
+        <h4 id="body-24-bold">Rp ${this.rentPerDay} / hari</h4>
+        <p class="card-text" id="body-14-light">${this.description}</p>
         <p><img class="me-2" src="./icon/fi_users.png" alt=""> ${this.capacity}</p>
         <p><img class="me-2" src="./icon/fi_settings.png" alt="">${this.transmission}</p>
         <p><img class="me-2" src="./icon/fi_calendar.png" alt="">${this.year}</p>

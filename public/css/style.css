@@ -40,7 +40,11 @@ nav{
     font-size: 14px; 
     font-weight: 700; 
     line-height: 20px;
-    
+}
+#body-16-bold{
+    font-size: 16px; 
+    font-weight: 700; 
+    line-height: 24px;
 }
 #heading-24-bold{
     font-size: 24px; 
@@ -184,6 +188,13 @@ footer{
     border-radius: 12px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
+}
+.card{
+    border: none;
+    border-radius: 12px;
+    box-shadow: -2px 3px 7px 9px rgba(237,232,232,0.84);
+-webkit-box-shadow: -2px 3px 7px 9px rgba(237,232,232,0.84);
+-moz-box-shadow: -2px 3px 7px 9px rgba(237,232,232,0.84);
 }
 
 /* End Seach Page */
