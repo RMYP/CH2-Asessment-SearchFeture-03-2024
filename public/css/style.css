@@ -87,7 +87,7 @@ nav{
 }
 
 ul{
-    list-style-image: url("/public/icon/checklist.svg");
+    list-style-image: url("../icon/checklist.svg")
 }
 li > *{
     display: inline-block;

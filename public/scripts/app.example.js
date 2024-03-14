@@ -6,6 +6,18 @@ class App {
     this.driverType = document.getElementById("driver-type");
     this.pickUpTime = document.getElementById("pick-up-time");
     this.PickUpDate = document.getElementById("start-date");
+
+    const input = [this.driverType, this.pickUpTime, this.PickUpDate];
+    input.forEach(input => input.addEventListener("input", this.btnDisable()));
+  }
+
+  btnDisable = () => {
+    if ( this.pickUpTime.value == "false" && this.driverType.value == "default"){
+        this.filterCars.disabled = true;
+        console.log("yes")
+    }else{
+      this.filterCars.disabled = false;
+    }
   }
 
   async init() {
